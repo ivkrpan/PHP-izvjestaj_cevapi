@@ -92,12 +92,12 @@ include "connect_db.php";
 				while ($datum < ($godina+1)."-01-01")
 				{
 					$dan_u_tjednu = date('w', strtotime($datum));
-					//echo $datum;
+
 					switch ($dan_u_tjednu)
 					{
 						case 0: //nedjelja
 						case 6: //subota
-							//echo " weekend";
+						
 							$avg_v= ($v_porcija * $postotak) + $ostatak_v;
 							$avg_m= ($m_porcija * $postotak) + $ostatak_m;
 							if ($u_centru)
@@ -112,7 +112,7 @@ include "connect_db.php";
 							$uk_vikend_malih += (floor($avg_m));
 						break;
 						default:
-							//$avg_v= ($v_porcija * $postotak);
+						
 							$avg_v= $v_porcija + $ostatak_v;
 							$avg_m= $m_porcija + $ostatak_m;
 							
@@ -227,7 +227,7 @@ function napravi_izvjestaje($id, $generiraj_dokumente=false)
 	$html = $html. izvjestaj_prodaje_u_restoranu($id, $csv);
 	$html = $html. '<br />';
 	$html = $html. izvjestaj_prodaje_po_porcijama($id, $csv);
-	$html = $html. '<br />';
+	
 	//$html = $html. '</body></html>';
 	
 	if ($generiraj_dokumente==true)	
@@ -260,7 +260,8 @@ function napravi_izvjestaje($id, $generiraj_dokumente=false)
 
 		fclose($fp);
 	}
-	$html = '<h1 style="text-align: center; font-weight: bold; ">'.$naziv_izvjestaja.'</h1>'.$html;
+
+	$html = '<h1 style="text-align: center; font-weight: bold; ">'.$naziv_izvjestaja.'</h1>'.$html. '<br />';;
 	return $html;
 }
 
