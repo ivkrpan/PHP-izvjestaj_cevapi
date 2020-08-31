@@ -1,0 +1,13 @@
+Jedan restoran u prosjeku proda 20 porcija ćevapa dnevno, od toga 15 velikih porcija i 5 manjih porcija. Vikendima prodaja poraste za 30%, od toga 40% odlazi na dostave. 
+Jedan vlasnik ima 10 restorana od čega se 4 restorana nalaze u centru grada a ostalih 6 u periferiji grada. Prodaja po restoranu u centru grada je 14% veća u odnosu na periferiju.
+U velikoj porciji ima 10, a maloj 5 ćevapa.
+Omogućiti unos, izmjenu i brisanje restorana, kao i svih parametara koji su navedeni u zadatku. Sve podatke spremati u bazu podataka.
+Vlasnik restorana želi saznati koliko ukupno ćevapa proda u jednoj godini. Potrebno je napraviti sljedeću statistiku prodaje ćevapa po: 
+•	restoranima u gradu,
+•	periferiji,
+•	radnom tjednu,
+•	vikendima,
+•	porcijama,
+•	unutar restorana i
+•	dostavama.
+Statističke izvještaje potrebno je spremiti u csv i pdf formatu i bazu podataka.

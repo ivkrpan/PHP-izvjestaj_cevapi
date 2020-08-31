@@ -1,0 +1,83 @@
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  overflow: hidden;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+  height:80%;
+  display: block !important;
+  color: black;
+  text-shadow:none;
+	overflow: auto;
+}
+.modal-loader {
+  border-radius: 25px;
+  background-color: #fefefe;
+  margin: 15% auto 0 auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%; /* Could be more or less, depending on screen size */
+  height:auto;
+  min-width:200px;
+  display: block !important;
+  color: black;
+}
+
+.modal-form{
+  background-color: #fefefe;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 30%; /* Could be more or less, depending on screen size */
+  height:300px;
+  display: block !important;
+  color: black;
+  text-shadow:none;
+
+	min-width:300px;
+}
+
+.modal-izvjestaj{
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 30%; /* Could be more or less, depending on screen size */
+  height:180px;
+  display: block !important;
+  color: black;
+  text-shadow:none;
+
+	min-width:300px;
+}
+
+/* The Close Button */
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: fixed;
+  right: 20%;
+}
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+

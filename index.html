@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Ćevapi statistika">
+    <meta name="author" content="Ivan Krpan">
+
+    <title>Statistika Ćevapi</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="theme-color" content="#563d7c">
+
+    <style>
+	
+	.izvjestaji	{
+		background-color:rgba(0,0,0,.5);
+		width: 100%;
+		height: 13em;
+		border-radius: 25px;
+		margin-bottom:10px;
+		overflow: auto;
+	}
+	.left {
+		float:left;
+	}
+	.right {
+		float:right;
+	}
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+    }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">	
+	
+  </head>
+  <body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">Statistika ćevapi</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="#" onclick="ucitaj_stranicu(this,'izvjestaji');">Izvještaji</a>
+        <a class="nav-link" href="#" onclick="ucitaj_stranicu(this,'restorani');">Restorani</a>
+        <a class="nav-link" href="#" onclick="ucitaj_stranicu(this,'postavke');">Postavke</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main" class="inner cover">
+
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>PHP Zadatak: Ćevapi, <a href="mailto:ivkrpan@vsite.hr">Ivan Krpan</a>, VSITE 2019./2020.</a></p>
+    </div>
+  </footer>
+</div>
+  
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+	<br>
+    <div id="modal-html">
+	</div>
+  </div>
+
+</div>
+
+<div id="loader" class="modal">
+	<div class="modal-loader">
+		<h5>Učitavanje...</h5>
+	</div>
+</div>
+
+<div id="restoran" class="modal">
+  <!-- Modal content -->
+  <div class="modal-form">
+	<div id="modal-form-html">
+	</div>
+	  </div>
+</div>
+
+<div id="izvjestaj" class="modal">
+  <!-- Modal content -->
+  <div class="modal-izvjestaj">
+
+	<form method="post" action="novi_izvjestaj.php">
+	
+		<div class="input-group mb-1">
+		  <div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Naziv izvještaja:</span>
+		  </div>
+		  <input type="text" class="form-control" name="naziv" aria-label="Naziv" id="izvjestaj_naziv" aria-describedby="basic-addon1">
+		</div>
+		
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Godina:</span>
+		  </div>
+		  <input type="text" class="form-control"  aria-label="godina" id="izvjestaj_godina" name="godina" aria-describedby="basic-addon1">
+		</div>
+			
+		<button type="button" class="btn btn-outline-primary" onclick="hideModalIzvjestaj();">Odustani</button>
+		<input class="btn btn-primary" type="button" value="Napravi izvještaj" onclick="napravi_izvjestaj(this);">
+		
+	</form>
+	</div>
+	</div>
+</div>
+
+
+<script src="cevapi.js" type="text/javascript" ></script>
+	
+</body>
+</html>
